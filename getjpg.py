@@ -15,7 +15,7 @@ def getImg(html):
     imglist = re.findall(imgre,html)
 
     for imgurl in  imglist:
-        urllib.urlretrieve(imgurl, '%s.jpg' % get_url_name(imgurl))
+        urllib.urlretrieve(imgurl, '%s' % get_url_name(imgurl))
 
 
 def get_url_name(url):
