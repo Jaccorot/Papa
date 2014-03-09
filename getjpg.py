@@ -31,7 +31,7 @@ def get_url_name(url):
         return url[separator_index+1 :]
 
 
-def download_callback_func(downloaded_size, block_size, omote_total_size):
+def download_callback_func(downloaded_size, block_size,romote_total_size):
     per = 100.0 * downloaded_size * block_size / romote_total_size
     if per > 100:
         per = 100
@@ -47,5 +47,5 @@ if __name__ == "__main__":
     #对保存路径进行设置,可以考虑使用配置文件而不是用户输入,如果输入也需要验证
     #html=get_html("http://tieba.baidu.com/p/2818994217?fr_bdps_bottom_login=1")
     html_content=get_html("http://"+html_url)
-    get_image(get_html,save_path)
+    get_image(html_content,save_path)
 
